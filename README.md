@@ -2,7 +2,7 @@
 
 **CodePulse** is a full-stack observability and DevOps project that simulates real-time developer activity logs, monitors emotional health, and visualizes patterns using the ELK stack (Elasticsearch, Kibana) with containerized services using Docker.
 
----
+----------------------------------------------------------------------------------------------------------------------------
 
 ## 📌 Table of Contents
 
@@ -16,26 +16,18 @@
 - 📂 [Project Structure](#project-structure)  
 - 🧪 [Future Enhancements](#future-enhancements)  
 
----
+----------------------------------------------------------------------------------------------------------------------------
 
 ## 📘 Project Overview
 
 Developer burnout is a critical but often ignored issue in the software industry. CodePulse is a simulated DevOps solution that generates real-time logs mimicking developer behavior (emotions, productivity, context switches), sends them to Elasticsearch, and visualizes these metrics in Kibana dashboards for actionable insights.
 
----
+----------------------------------------------------------------------------------------------------------------------------
 
 ## 🧱 Architecture
 
-+----------------------+ POST +----------------------+ PUSH +----------------------+
-| simulate_logs.py | -------> | FastAPI Monitor | -------> | Elasticsearch |
-| (Log Generator) | | (Receives + Filters) | | (Search & Storage) |
-+----------------------+ +----------------------+ +----------+-----------+
-| Visualization via |
-| Kibana UI |
-+----------------------+
+[Refer the digarms from diagrams folder]
 
-
----
 
 ## 🛠️ Tech Stack
 
@@ -48,7 +40,7 @@ Developer burnout is a critical but often ignored issue in the software industry
 | 📈 Visualization   | Kibana                |
 | 🔗 GitHub Webhooks | (Future integration)  |
 
----
+----------------------------------------------------------------------------------------------------------------------------
 
 ## ⚙️ How It Works
 
@@ -71,7 +63,7 @@ Developer burnout is a critical but often ignored issue in the software industry
   - Bar graphs
   - Line charts
 
----
+----------------------------------------------------------------------------------------------------------------------------
 
 ## 🚀 Getting Started
 
@@ -96,51 +88,44 @@ python simulate_logs.py
 
 You should now see logs flowing into Elasticsearch.
 
+----------------------------------------------------------------------------------------------------------------------------
 
 📊 Observability Dashboards (Kibana)
-Open Kibana at: http://localhost:5601
+- Open Kibana at: http://localhost:5601
 
-Create a Data View (e.g., codepulse-*)
+- Create a Data View (e.g., codepulse-*)
 
-Use the Discover tab to see logs in real time
+- Use the Discover tab to see logs in real time
 
-Create the following visualizations:
+- Create the following visualizations:
 
-Developer Emotion Pie Chart
+  --Developer Emotion Pie Chart
 
-Burnout Bar Chart (Y-axis: mood_level)
+  --Burnout Bar Chart (Y-axis: mood_level)
 
-Health Line Chart (X-axis: @timestamp)
+  --Health Line Chart (X-axis: @timestamp)
 
 Combine visualizations into a Kibana Dashboard
 
+----------------------------------------------------------------------------------------------------------------------------
 💡 Use Cases
-Real-time monitoring of developer emotional health
+- Real-time monitoring of developer emotional health
 
-Full-stack observability showcase with ELK stack
+- Full-stack observability showcase with ELK stack
 
-Resume-worthy DevOps portfolio project
+- Resume-worthy DevOps portfolio project
 
-GitHub-triggered log ingestion (future enhancement)
+- GitHub-triggered log ingestion (future enhancement)
+
+  ----------------------------------------------------------------------------------------------------------------------------
 
 📂 Project Structure
 
-codepulse-devops/
-│
-├── docker-compose.yml          # Orchestrates services
-│
-├── monitor/
-│   ├── app/
-│   │   ├── main.py             # FastAPI entrypoint
-│   │   ├── elastic_client.py   # Push logs to Elasticsearch
-│   │   ├── utils.py            # Helper functions
-│   │   └── github_webhook_handler.py  # GitHub event handling (future)
-│   ├── simulate_logs.py        # Developer log simulation
-│   ├── requirements.txt        # Python dependencies
-│   └── Dockerfile              # Docker setup for FastAPI app
+[Refer the digarms from diagrams folder]
 
-
+----------------------------------------------------------------------------------------------------------------------------
 🧪 Future Enhancements
+
 ✅ GitHub webhook integration to track PRs, issues, and commits
 
 ✅ Slack/Discord alerts for burnout detection
